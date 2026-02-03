@@ -1,0 +1,11 @@
+version: '3.8'
+
+services:
+  tests:
+    build: .
+    container_name: saucedemo-tests
+    volumes:
+      - ./allure-results:/app/allure-results
+      - ./screenshots:/app/screenshots
+    environment:
+      - PYTHONUNBUFFERED=1
